@@ -100,7 +100,7 @@ install_theme() {
     read -r SELECT_THEME
     case "$SELECT_THEME" in
     1) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C2.zip"; break ;;
-    2) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/enigma.zip"; break ;;
+    2) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/billing.zip"; break ;;
     3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
     x) return ;;
       *)
@@ -158,7 +158,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /root/enigma.zip
+  sudo rm /root/billing.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
