@@ -69,7 +69,6 @@ check_token() {
     echo -e "${YELLOW}Hubungi @GlobalBotzXD untuk membeli token valid.${NC}"
     exit 1
   fi
-  sleep 1
   clear
 }
 
