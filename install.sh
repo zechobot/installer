@@ -94,14 +94,16 @@ install_theme() {
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
     echo "1. stellar"
     echo "2. billing"
-    echo "3. enigma"
+    echo "3. enigmav1"
+    echo "4. enigma"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
     1) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C2.zip"; break ;;
     2) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/billing.zip"; break ;;
-    3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
+    3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/v4.zip"; break ;;
+    4) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
     x) return ;;
       *)
         echo -e "${RED}Pilihan tidak valid, silahkan coba lagi.${NC}"
@@ -169,8 +171,35 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   sleep 2
   clear
   return
-
+  
 elif [ "$SELECT_THEME" -eq 3 ]; then
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  sudo apt install -y nodejs
+  sudo npm i -g yarn
+  cd /var/www/pterodactyl
+  yarn add react-feather
+  php artisan migrate
+  yarn build:production
+  php artisan view:clear
+  sudo rm /root/v4.zip
+  sudo rm -rf /root/pterodactyl
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                  INSTALL SUCCESS                [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  clear
+  return
+  
+elif [ "$SELECT_THEME" -eq 4 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
