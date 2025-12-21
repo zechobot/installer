@@ -156,7 +156,6 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
-  php artisan billing:install stable
   php artisan migrate --force
   yarn build:production
   php artisan view:clear
