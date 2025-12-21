@@ -93,7 +93,7 @@ install_theme() {
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
     echo "1. stellar"
-    echo "2. billing"
+    echo "2. PROTEX"
     echo "3. enigmav1"
     echo "4. enigma"
     echo "x. kembali"
@@ -101,7 +101,7 @@ install_theme() {
     read -r SELECT_THEME
     case "$SELECT_THEME" in
     1) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C2.zip"; break ;;
-    2) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/billing.zip"; break ;;
+    2) THEME_URL="https://github.com/sandyparadox59-alt/felmod/raw/main/felix.zip"; break ;;
     3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/v4.zip"; break ;;
     4) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
     x) return ;;
@@ -147,7 +147,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
 elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
+  echo -e "${BLUE}[+]             INSTALLASI THEMA PROTEX             [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -157,10 +157,10 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan billing:install stable
-  php artisan migrate
+  php artisan migrate --force
   yarn build:production
   php artisan view:clear
-  sudo rm /root/billing.zip
+  sudo rm /root/felix.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
