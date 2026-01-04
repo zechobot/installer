@@ -158,7 +158,7 @@ show_art
   echo -e "${BLUE}[+]                INSTALL PROTEX V1.0.0                [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
 
-  wget -O /root/ProtexV1.zip https://github.com/zechobot/protex_pterodactyl/raw/main/ProtexV1.zip
+  wget -O /root/ProtexV1.zip https://raw.githubusercontent.com/zechobot/installer/refs/heads/main/file/ProtexV1.zip
   unzip /root/ProtexV1.zip -d /root/pterodactyl
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -189,7 +189,7 @@ show_art
   echo -e "${BLUE}[+]                INSTALL PROTEX V1.5.0                [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
 
-  wget -O /root/ProtexV1.5.0.zip https://github.com/sandyparadox59-alt/felmod/raw/main/felix.zip
+  wget -O /root/ProtexV1.5.0.zip https://github.com/zechobot/installer/raw/main/file/felix.zip
   unzip /root/ProtexV1.5.0.zip -d /root/pterodactyl
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -220,7 +220,7 @@ show_art
   echo -e "${BLUE}[+]                INSTALL PROTEX V1.5.3                [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
 
-  wget -O /root/ProtexV1.5.3.zip https://github.com/sandyparadox59-alt/felmod/raw/main/Felixv1.5.3.zip
+  wget -O /root/ProtexV1.5.3.zip https://github.com/zechobot/installer/raw/main/file/Felixv1.5.3.zip
   unzip /root/ProtexV1.5.3.zip -d /root/pterodactyl
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -384,7 +384,7 @@ check_token
 while true; do
 show_art
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                 FELIX PARADOX MENU              [+]${NC}"
+  echo -e "${BLUE}[+]                 ZECHO INSTALLER MENU              [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo ""
   echo "1. Install Protex V1.0.0"
