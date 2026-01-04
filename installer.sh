@@ -277,7 +277,7 @@ fi
     php artisan view:clear
     php artisan config:clear
 
-    echo "==> SKIP MIGRATE (database MySQL aman, tidak disentuh)"
+    echo "==> SKIP MIGRATE,database MySQL aman, tidak disentuh"
 
     echo "==> Set ownership..."
     chown -R www-data:www-data $PANEL_DIR
