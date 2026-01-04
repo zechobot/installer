@@ -461,6 +461,6 @@ show_art
     6) hackback_panel ;;
     7) ubahpw_vps ;;
     x) echo ""; exit 0 ;;
-    *) echo -e "${RED}Pilihan tidak valid!${NC}" ;;
+    *) echo -e `${RED}Pilihan tidak valid!${NC}` ;;
   esac
 done
