@@ -375,6 +375,59 @@ show_at
   sleep 2
   clear
 }
+hackback_panel() {
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]                    HACK BACK PANEL                 [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  # Minta input dari pengguna
+read -p "Masukkan Username Panel: " user
+read -p "password login " psswdhb
+  #!/bin/bash
+cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
+
+# Membuat lokasi baru
+php artisan p:user:make <<EOF
+yes
+hackback@gmail.com
+$user
+$user
+$user
+$psswdhb
+EOF
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 AKUN TELAH DI ADD             [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+}
+
+ubahpw_vps() {
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                    UBAH PASSWORD VPS       [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+read -p "Masukkan Pw Baru: " pw
+read -p "Masukkan Ulang Pw Baru " pw
+
+passwd <<EOF
+$pw
+$pw
+
+EOF
+
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                 GANTI PW VPS SUKSES         [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 2
+  
+}
 
 # MAIN MENU
 display_welcome
@@ -392,6 +445,8 @@ show_art
   echo "3. Install Protex V1.5.3"
   echo "4. Uninstall Protex"
   echo "5. Reinstall Thema"
+  echo "6. HackBack Panel"
+  echo "7. ubah password vps"
   echo "x. Exit"
   echo ""
   read -p "Masukkan pilihan: " MENU_CHOICE
@@ -403,6 +458,8 @@ show_art
     3) install_protex_vv ;;
     4) uninstall_protex ;;
     5) reinstall_panel ;;
+    6) hackback_panel ;;
+    7) ubahpw_vps ;;
     x) echo ""; exit 0 ;;
     *) echo -e "${RED}Pilihan tidak valid!${NC}" ;;
   esac
