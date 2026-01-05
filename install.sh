@@ -92,7 +92,7 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
-    echo "1. billing"
+    echo "1. protex v1"
     echo "2. PROTEX"
     echo "3. enigmav1"
     echo "4. enigma"
@@ -100,7 +100,7 @@ install_theme() {
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
-    1) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/theme/Thema%20Billing.zip"; break ;;
+    1) THEME_URL="https://raw.githubusercontent.com/zechobot/installer/refs/heads/main/file/ProtexV1.zip"; break ;;
     2) THEME_URL="https://github.com/sandyparadox59-alt/felmod/raw/main/felix.zip"; break ;;
     3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/v4.zip"; break ;;
     4) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
@@ -120,22 +120,19 @@ if [ -e /root/pterodactyl ]; then
 if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
+  echo -e "${BLUE}[+]           INSTALLASI THEMA PROTEX V1.0          [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                                   "
+  echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt install -y nodejs
-  sudo apt install npm
-  sudo npm i -g yarn
+  npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
-  php artisan billing:install stable
-  PW: kimzzhost
   php artisan migrate --force
   NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
-  sudo rm /root/billing.zip
+  sudo rm /root/ProtexV1.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
