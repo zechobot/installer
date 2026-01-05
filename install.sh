@@ -130,7 +130,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan migrate
-  yarn build:production
+  NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/C2.zip
   sudo rm -rf /root/pterodactyl
@@ -157,7 +157,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan migrate --force
-  yarn build:production
+  NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/felix.zip
   sudo rm -rf /root/pterodactyl
@@ -184,7 +184,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan migrate
-  yarn build:production
+  NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/v4.zip
   sudo rm -rf /root/pterodactyl
@@ -204,21 +204,6 @@ elif [ "$SELECT_THEME" -eq 4 ]; then
   echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
-
-    # Menanyakan informasi kepada pengguna untuk tema Enigma
-    echo -e "${YELLOW}Masukkan link wa (https://wa.me...) : ${NC}"
-    read LINK_WA
-    echo -e "${YELLOW}Masukkan link group (https://.....) : ${NC}"
-    read LINK_GROUP
-    echo -e "${YELLOW}Masukkan link channel (https://...) : ${NC}"
-    read LINK_CHNL
-
-    # Mengganti placeholder dengan nilai dari pengguna
-    sudo sed -i "s|LINK_WA|$LINK_WA|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    
-
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt install -y nodejs
@@ -226,7 +211,7 @@ elif [ "$SELECT_THEME" -eq 4 ]; then
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan migrate
-  yarn build:production
+  NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/C3.zip
   sudo rm -rf /root/pterodactyl
