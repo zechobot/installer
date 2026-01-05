@@ -388,7 +388,7 @@ read -p "password login " psswdhb
 cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
 
 # Membuat lokasi baru
-php artisan p:user:make <<EOF
+php artisan p:user:make <<'EOF'
 yes
 hackback@gmail.com
 $user
@@ -413,7 +413,7 @@ ubahpw_vps() {
 read -p "Masukkan Pw Baru: " pw
 read -p "Masukkan Ulang Pw Baru " pw
 
-passwd <<EOF
+passwd <<'EOF'
 $pw
 $pw
 
