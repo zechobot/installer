@@ -130,8 +130,8 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan billing:install stable
-  kimzzhost
-  php artisan migrate
+  PW: kimzzhost
+  php artisan migrate --force
   NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/billing.zip
