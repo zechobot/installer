@@ -100,7 +100,7 @@ install_theme() {
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
-    1) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/billing.zip"; break ;;
+    1) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/theme/Thema%20Billing.zip"; break ;;
     2) THEME_URL="https://github.com/sandyparadox59-alt/felmod/raw/main/felix.zip"; break ;;
     3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/v4.zip"; break ;;
     4) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
@@ -129,6 +129,8 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   sudo npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
+  php artisan billing:install stable
+PW : kimzzhost
   php artisan migrate
   NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
