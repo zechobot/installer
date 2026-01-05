@@ -92,7 +92,7 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
-    echo "1. stellar"
+    echo "1. billing"
     echo "2. PROTEX"
     echo "3. enigmav1"
     echo "4. enigma"
@@ -100,7 +100,7 @@ install_theme() {
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
-    1) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C2.zip"; break ;;
+    1) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/billing.zip"; break ;;
     2) THEME_URL="https://github.com/sandyparadox59-alt/felmod/raw/main/felix.zip"; break ;;
     3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/v4.zip"; break ;;
     4) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
@@ -132,7 +132,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   php artisan migrate
   NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
-  sudo rm /root/C2.zip
+  sudo rm /root/billing.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
