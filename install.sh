@@ -12,8 +12,8 @@ display_welcome() {
   echo -e ""
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © RafatharCode                [+]${NC}"
+  echo -e "${BLUE}[+]           AUTO INSTALLER Protex ×Theme          [+]${NC}"
+  echo -e "${BLUE}[+]            © Zechoxyz × FelixParadox            [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${RED}[+] =============================================== [+]${NC}"
   echo -e ""
@@ -21,9 +21,9 @@ display_welcome() {
   echo -e "dilarang keras untuk dikasih gratis."
   echo -e ""
   echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
-  echo -e "@RafatharCode"
+  echo -e "@zechoxyz"
   echo -e "𝗖𝗥𝗘𝗗𝗜𝗧𝗦 :"
-  echo -e "@RafatharCode"
+  echo -e "@zechoxyz"
   sleep 4
   clear
 }
@@ -56,10 +56,10 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSY RAFATHAR CODE            [+]${NC}"
+  echo -e "${BLUE}[+]               KEY ACCES INSTALLER...            [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
+  echo -e "${YELLOW}Input Your Key Installer :${NC}"
   read -r USER_TOKEN
   RAW_URL="https://raw.githubusercontent.com/sandyparadox59-alt/felixbetates/refs/heads/main/gmbs/gg.json"
 
@@ -71,13 +71,13 @@ check_token() {
 
   valid=$(echo "$json" | jq -r --arg t "$USER_TOKEN" '.tokens[] | select(. == $t)')
   if [ -n "$valid" ]; then
-    echo -e "${GREEN}AKSES BERHASIL${NC}}"
+    echo -e "${GREEN}access granted${NC}}"
   else
-    echo -e "${GREEN}Buy dulu Gih Ke RafatharCode X Amalia${NC}"
-    echo -e "${YELLOW}TELEGRAM : @RafatharCode${NC}"
-    echo -e "${YELLOW}WHATSAPP : 6285864743922${NC}"
-    echo -e "${YELLOW}HARGA TOKEN : 25K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
-    echo -e "${YELLOW}©RafatharCode${NC}"
+    echo -e "${GREEN}NGAPAIN WOI,LU SAPA PAKE INSTALLER ORANG TANPA IZIN DONGO,BUY TOKEN DI ZECHO SONO${NC}"
+    echo -e "${YELLOW}TELEGRAM : @zechoxyz${NC}"
+    echo -e "${YELLOW}channels : https://t.me/inpozecho${NC}"
+    echo -e "${YELLOW}HARGA TOKEN : 10K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
+    echo -e "${YELLOW}©zechoxyz${NC}"
     exit 1
   fi
   clear
@@ -471,24 +471,26 @@ check_token
 
 while true; do
   clear
-  echo -e "                                                                     "
-  echo -e "${BLUE}        _,gggggggggg.                                     ${NC}"
-  echo -e "${BLUE}    ,ggggggggggggggggg.                                   ${NC}"
-  echo -e "${BLUE}  ,ggggg        gggggggg.                                 ${NC}"
-  echo -e "${BLUE} ,ggg'               'ggg.                                ${NC}"
-  echo -e "${BLUE}',gg       ,ggg.      'ggg:                               ${NC}"
-  echo -e "${BLUE}'ggg      ,gg'''  .    ggg       Auto Installer RafatharCode Private   ${NC}"
-  echo -e "${BLUE}gggg      gg     ,     ggg      ------------------------  ${NC}"
-  echo -e "${BLUE}ggg:     gg.     -   ,ggg       • Telegram : t.me/RafatharCode     ${NC}"
-  echo -e "${BLUE} ggg:     ggg._    _,ggg        • Creadit  : RAFATHARCODE ${NC}"
-  echo -e "${BLUE} ggg.    '.'''ggggggp           • Support by RafatharCode X Amalia  ${NC}"
-  echo -e "${BLUE}  'ggg    '-.__                                           ${NC}"
-  echo -e "${BLUE}    ggg                                                   ${NC}"
-  echo -e "${BLUE}      ggg                                                 ${NC}"
-  echo -e "${BLUE}        ggg.                                              ${NC}"
-  echo -e "${BLUE}          ggg.                                            ${NC}"
-  echo -e "${BLUE}             b.                                           ${NC}"
-  echo -e "                                                                     "
+  echo -e "                                                                     
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠱⣄⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⣀⠀⠀⢢⣤⣀⣦⣄⡀⠙⣶⡘⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   || Installer Protect × Theme       ||   ⠀⠀  ${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⣀⣀⣨⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣯⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀    -----------------------------------    ⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⢀⣽⣿⣿⣿⣿⠟⠛⠛⠛⠛⠻⢿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀   ⠀||⠀• owner : @zechoxyz             ||    ⠀  ${NC}"
+  echo -e "${BLUE}⠀⠀⠘⣻⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣿⣿⣿⣿⢿⣷⡀⠀⠀⠀⠀   || • Name Tools : Protect × Theme  ||       ${NC}"
+  echo -e "${BLUE}⠀⠀⣴⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣿⣿⣿⣷⣽⣷⣄⠀⠀⠀   || • Type Code : Sheel             ||     ⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⣾⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢿⣿⣿⣿⣯⠁⠀⠀   || • Base Code : Skyzopedia        ||      ⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠐⠛⢿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⣿⣿⣷⣄⡀    -----------------------------------       ⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠘⠟⠿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⠇⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⣿⣷⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠟⠋⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⢿⣷⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"                  
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"                  
+  echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"                                                             ${NC}"
+  echo -e "                                                                     
   echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
   echo "2. Uninstall theme"
