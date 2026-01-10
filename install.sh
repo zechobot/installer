@@ -7,6 +7,18 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
 
+#Data vps
+USER_HOST="root@$(hostname)"
+OS=$(lsb_release -ds 2>/dev/null || echo "Ubuntu 22.04.4 LTS")
+KERNEL=$(uname -r)
+UPTIME=$(uptime -p | sed 's/up //')
+PACKAGES=$(dpkg-query -f '.\n' -W | wc -l)
+SHELL_NAME=$(basename $SHELL)
+# Deteksi CPU dan batasi panjang karakter agar tidak berantakan
+CPU_NAME=$(grep -m1 "model name" /proc/cpuinfo | cut -d: -f2 | sed 's/^[ \t]*//' | cut -c1-30)
+MEM_USED=$(free -m | awk '/Mem:/ { print $3 }')
+MEM_TOTAL=$(free -m | awk '/Mem:/ { print $2 }')
+
 # Display welcome message
 display_welcome() {
   echo -e ""
