@@ -73,7 +73,7 @@ check_token() {
   echo -e "                                                       "
   echo -e "${YELLOW}Input Your Key Installer :${NC}"
   read -r USER_TOKEN
-  RAW_URL="https://raw.githubusercontent.com/sandyparadox59-alt/felixbetates/refs/heads/main/gmbs/gg.json"
+  RAW_URL="https://raw.githubusercontent.com/zechobot/installer/refs/heads/main/gmbs/gg.json"
 
   json=$(curl -fsS --max-time 10 "$RAW_URL") || json=""
   if [ -z "$json" ]; then
@@ -102,8 +102,7 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "${BLUE}[+]                   SELECT THEME                  [+]${NC}"
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
-    echo -e "                                                       "
-    echo -e "PILIH THEME YANG INGIN DI INSTALL"
+    echo PILIH THEME YANG INGIN DI INSTALL"
     echo "1. protex v1"
     echo "2. PROTEX"
     echo "3. enigmav1"
@@ -154,7 +153,6 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e ""
   sleep 2
   clear
-  exit 0
 
 elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
@@ -355,7 +353,6 @@ EOF
   echo -e "                                                       "
   sleep 2
   clear
-  exit 0
 }
 uninstall_panel() {
   echo -e "                                                       "
@@ -366,6 +363,7 @@ uninstall_panel() {
 
 
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
+6
 y
 y
 y
@@ -380,7 +378,6 @@ EOF
   echo -e "                                                       "
   sleep 2
   clear
-  exit 0
 }
 configure_wings() {
   echo -e "                                                       "
@@ -404,7 +401,6 @@ sudo systemctl start wings
   echo -e "                                                       "
   sleep 2
   clear
-  exit 0
 }
 hackback_panel() {
   echo -e "                                                       "
@@ -433,8 +429,7 @@ EOF
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
-  
-  exit 0
+
 }
 ubahpw_vps() {
   echo -e "                                                       "
@@ -459,7 +454,6 @@ EOF
   echo -e "                                                       "
   sleep 2
   
-  exit 0
 }
 # Main script
 display_welcome
