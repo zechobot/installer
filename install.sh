@@ -102,7 +102,7 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "${BLUE}[+]                   SELECT THEME                  [+]${NC}"
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
-    echo PILIH THEME YANG INGIN DI INSTALL"
+    echo "PILIH THEME YANG INGIN DI INSTALL"
     echo "1. protex v1"
     echo "2. PROTEX"
     echo "3. enigmav1"
