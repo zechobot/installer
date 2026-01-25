@@ -483,7 +483,7 @@ while true; do
   echo -e "${BLUE}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀${NC}"       
   echo -e "${BLUE}                                      ${NC}"
   echo -e "BERIKUT LIST INSTALL :"
-  echo "1. Install theme"
+  echo "1. Install Protex"
   echo "2. Uninstall theme"
   echo "3. Configure Wings"
   echo "4. Create Node"
