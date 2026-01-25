@@ -104,17 +104,17 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo "PILIH THEME YANG INGIN DI INSTALL"
     echo "1. protex v1"
-    echo "2. PROTEX"
-    echo "3. enigmav1"
-    echo "4. enigma"
+    echo "2. PROTEX v1.3"
+    echo "3. protex v1.3.5"
+    echo "4. noko"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
     1) THEME_URL="https://raw.githubusercontent.com/zechobot/installer/refs/heads/main/file/ProtexV1.zip"; break ;;
-    2) THEME_URL="https://github.com/sandyparadox59-alt/felmod/raw/main/felix.zip"; break ;;
-    3) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/v4.zip"; break ;;
-    4) THEME_URL="https://github.com/sandyparadox59-alt/felixbetates/raw/main/C3.zip"; break ;;
+    2) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/file/felix.zip"; break ;;
+    3) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/file/Felixv1.5.3.zip"; break ;;
+    4) THEME_URL="https://github.com/zechobot/installer/raw/refs/heads/main/file/noko.zip"; break ;;
     x) return ;;
       *)
         echo -e "${RED}Pilihan tidak valid, silahkan coba lagi.${NC}"
