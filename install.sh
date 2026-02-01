@@ -193,7 +193,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
-  php artisan migrate
+  php artisan migrate --force
   NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/v4.zip
@@ -220,7 +220,7 @@ elif [ "$SELECT_THEME" -eq 4 ]; then
   sudo npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
-  php artisan migrate
+  php artisan migrate --force
   NODE_OPTIONS=--openssl-legacy-provider yarn build:production
   php artisan view:clear
   sudo rm /root/C3.zip
@@ -281,7 +281,7 @@ sudo npm i -g yarn
 # Instal dependensi dan build tema
 cd /var/www/pterodactyl
 yarn add react-feather
-php artisan migrate
+php artisan migrate --force
 yarn build:production
 php artisan view:clear
 
