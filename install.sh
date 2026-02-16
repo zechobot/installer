@@ -410,7 +410,7 @@ fi
 
 echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]        CREATE NODE & LOCATION SUKSES             [+]${NC}"
+  echo -e "${GREEN}[+]        CREATE ALLOCATION & PORT SELESAI!!       [+]${NC}"
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sleep 2
@@ -550,10 +550,11 @@ while true; do
   echo "2. Uninstall theme"
   echo "3. Configure Wings"
   echo "4. Create Node"
-  echo "5. Uninstall Panel"
-  echo "6. Stellar Theme"
-  echo "7. Hack Back Panel"
-  echo "8. Ubah Pw Vps"
+  e ho "5. create allocation & port"
+  echo "6. Uninstall Panel"
+  echo "7. Stellar Theme"
+  echo "8. Hack Back Panel"
+  echo "9. Ubah Pw Vps"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
@@ -573,15 +574,18 @@ while true; do
       create_node
       ;;
       5)
-      uninstall_panel
+      create_port()
       ;;
       6)
-      install_themeSteeler
+      uninstall_panel
       ;;
       7)
-      hackback_panel
+      install_themeSteeler
       ;;
       8)
+      hackback_panel
+      ;;
+      9)
       ubahpw_vps
       ;;
     x)
