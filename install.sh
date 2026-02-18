@@ -574,7 +574,7 @@ while true; do
       create_node
       ;;
       5)
-      create_port()
+      create_port
       ;;
       6)
       uninstall_panel
