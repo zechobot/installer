@@ -550,7 +550,7 @@ while true; do
   echo "2. Uninstall theme"
   echo "3. Configure Wings"
   echo "4. Create Node"
-  e ho "5. create allocation & port"
+  echo "5. create allocation & port"
   echo "6. Uninstall Panel"
   echo "7. Stellar Theme"
   echo "8. Hack Back Panel"
