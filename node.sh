@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Masukkan nama location (contoh: SGP): "
 read location_name
+echo "Masukkan deskripsi lokasi: "
+read location_description
 echo "Masukkan id location (contoh: 1): "
 read locid
 echo "Masukkan nama node (contoh: Nodes): "
