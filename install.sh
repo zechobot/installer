@@ -96,11 +96,11 @@ check_token() {
 }
 
 # Install theme
-install_theme() {
+install_protex() {
   while true; do
     echo -e "                                                       "
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
-    echo -e "${BLUE}[+]                   SELECT THEME                  [+]${NC}"
+    echo -e "${BLUE}[+]                   SELECT PROTEX                  [+]${NC}"
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo "PILIH THEME YANG INGIN DI INSTALL"
     echo "1. protex v1"
@@ -184,7 +184,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
 elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
+  echo -e "${BLUE}[+]             INSTALLASI THEMA PROTEX             [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -254,50 +254,6 @@ uninstall_theme() {
   echo -e "                                                       "
   sleep 2
   clear
-}
-install_themeSteeler() {
-#!/bin/bash
-
-echo -e "                                                       "
-echo -e "${BLUE}[+] =============================================== [+]${NC}"
-echo -e "${BLUE}[+]                  INSTALLASI THEMA               [+]${NC}"
-echo -e "${BLUE}[+] =============================================== [+]${NC}"
-echo -e "                                                                   "
-
-# Unduh file tema
-wget -O /root/C2.zip https://github.com/gitfdil1248/thema/raw/main/C2.zip
-
-# Ekstrak file tema
-unzip /root/C2.zip -d /root/pterodactyl
-
-# Salin tema ke direktori Pterodactyl
-sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-
-# Instal Node.js dan Yarn
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install -y nodejs
-sudo npm i -g yarn
-
-# Instal dependensi dan build tema
-cd /var/www/pterodactyl
-yarn add react-feather
-php artisan migrate --force
-yarn build:production
-php artisan view:clear
-
-# Hapus file dan direktori sementara
-sudo rm /root/C2.zip
-sudo rm -rf /root/pterodactyl
-
-echo -e "                                                       "
-echo -e "${GREEN}[+] =============================================== [+]${NC}"
-echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-echo -e "${GREEN}[+] =============================================== [+]${NC}"
-echo -e ""
-sleep 2
-clear
-exit 0
-
 }
 create_node() {
   echo -e "                                                       "
@@ -552,9 +508,8 @@ while true; do
   echo "4. Create Node"
   echo "5. create allocation & port"
   echo "6. Uninstall Panel"
-  echo "7. Stellar Theme"
-  echo "8. Hack Back Panel"
-  echo "9. Ubah Pw Vps"
+  echo "7. Hack Back Panel"
+  echo "8. Ubah Pw Vps"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
@@ -580,12 +535,9 @@ while true; do
       uninstall_panel
       ;;
       7)
-      install_themeSteeler
-      ;;
-      8)
       hackback_panel
       ;;
-      9)
+      8)
       ubahpw_vps
       ;;
     x)
