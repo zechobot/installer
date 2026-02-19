@@ -1,4 +1,4 @@
-#bin/bash
+#!/bin/bash
 echo "Masukkan nama location (contoh: SGP): "
 read location_name
 echo "Masukkan id location (contoh: 1): "
